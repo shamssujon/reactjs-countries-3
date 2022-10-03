@@ -1,9 +1,12 @@
 import "./App.css";
+import Countries from "./components/Countries/Countries";
+import Header from "./components/Header/Header";
 
 function App() {
     return (
-        <div className="App">
-            
+        <div className="App bg-slate-50">
+            <Header></Header>
+            <Countries></Countries>
         </div>
     );
 }
