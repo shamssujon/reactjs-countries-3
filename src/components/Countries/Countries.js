@@ -6,7 +6,7 @@ const Countries = () => {
     useEffect(() => {
         fetch("https://restcountries.com/v3.1/all")
             .then((res) => res.json())
-            .then((data) => setCountries(data));
+            .then((data) => setCountries(data.sort((a, b) => a.name.common.localeCompare(b.name.common))));
     }, []);
     return (
         <section className="py-20">
